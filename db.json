@@ -41,6 +41,12 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "spider plant",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpxO0XMdk7AzOF1JFiPUZpf6oABNSvhHG1YZtfgw0K9Z_mshWAJq2aX3MlgiQ&usqp=CAc",
+      "price": "269.00",
+      "id": 8
     }
   ]
 }
