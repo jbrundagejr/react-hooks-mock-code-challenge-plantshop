@@ -1,7 +1,8 @@
 import React from "react";
 import {useState} from "react"
 
-function PlantCard({name, image, price}) {
+function PlantCard({plant}) {
+  const {name, image, price} = plant
   
   const [inStock, setInStock] = useState(true)
 

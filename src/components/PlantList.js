@@ -1,15 +1,15 @@
 import PlantCard from "./PlantCard";
 
 function PlantList({plants}) {
-  return (
-    <ul className="cards">{plants.map((plant) => 
-      <PlantCard
-      key={plant.id} 
-      name={plant.name} 
-      image={plant.image} 
-      price={plant.price}
+  const plantCards = plants.map(plantObj => { 
+    return <PlantCard
+      key={plantObj.id} 
+      plant={plantObj}
       />
-      )}
+    })
+  return (
+    <ul className="cards">
+      {plantCards}
     </ul>
   )}
 

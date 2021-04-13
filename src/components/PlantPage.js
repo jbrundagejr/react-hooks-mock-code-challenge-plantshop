@@ -7,21 +7,21 @@ function PlantPage() {
   const [plants, setPlants] = useState([])
   const [searchedPlant, setSearchedPlant] = useState("")
 
-
   useEffect(() => {
     fetch("http://localhost:6001/plants")
       .then(res => res.json())
-      .then((data) => {
-        setPlants(data)
+      .then((plantsArr) => {
+        setPlants(plantsArr)
       })
   }, [])  
+
   function handleAddPlant(newPlant){
     setPlants([...plants, newPlant])
   }
 
-  const filteredPlants = plants.filter(plant => 
-    plant.name.toLowerCase().includes(searchedPlant.toLowerCase()) 
-  )
+  const filteredPlants = plants.filter(plant => {
+    return plant.name.toLowerCase().includes(searchedPlant.toLowerCase()) 
+  })
 
   return (
     <main>
